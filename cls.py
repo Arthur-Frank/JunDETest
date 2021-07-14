@@ -1,7 +1,5 @@
 from utils import *
 
-#if_github update
-
 class Bundle:
 
     def __init__(self, path, name):
