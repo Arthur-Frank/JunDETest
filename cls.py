@@ -34,6 +34,7 @@ class Bundle:
         latest_job_log = get_latest_log(job_name, archived_files_list)
         # func can extarct log from the zip in case it needs in future
         #bundle.extract(latest_job_log, Bundle.path)
+        print (self.path)
         log = Log(latest_job_log, self.path)
         file = log.parse_log(bundle, job_name)
         return file
