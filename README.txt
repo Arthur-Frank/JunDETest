@@ -22,4 +22,5 @@ Data returned as a .txt file has the name of parsed Job and located under the di
 In the Algorithm_task.py file a concept of other data can be extract from the Job log.
 
 
-Test.py contains unit tests for:
+Test.py contains unit tests for the Bundle class. Checks cases with the correct and incorrect names of the Veeam log bundle in the directory. Tests the main parser method from the Bundle class - extract_log. Creates a result txt file from the Log bundle provided with project 2021-07-07T161552_VeeamBackupLogs.zip - compares contain this file with a default list.
+To run tests execute Test.py file from project directory.

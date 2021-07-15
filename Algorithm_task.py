@@ -40,4 +40,18 @@ def hypervisor_detector(line):
             hypervisor = "Hyper-V"
     return hypervisor
 
+# Same way we can get information about Target repository and VM name and if the Application-Aware processing enabled.
+# That should be enough for the basic trouble shouting with Job log.
+#The rest of information needs to be get from the Task and agent log  for example:
 
+def get_task_log(VM_name, list_of_archived_files):
+    latest_task_log = ""
+    log_name_like = "Task." + VM_name
+    for file in list_of_archived_files:
+        if log_name_like in file:
+            latest_task_log = file
+    return latest_task_log
+
+# From task we can get the latest error as well and check the nu,ber of the Agent returns the exception
+# by the number of Agent we can open the exact Agent log returns the error and get the error trace from it
+# that mostky will lead us to the root cause
